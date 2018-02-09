@@ -16,4 +16,25 @@ Massine Kadi, ,\\
 Félix Pelletier, }
 \begin{document}
 
+\underline{Première méthode : bobines en rotation}
+Cette méthode est à la fois mécanique et électromagnétique. Le volet mécanique consiste à positionner trois bobines, en rotation, de manière à ce que leur axe de rotation sont orthogonales. (figure x). Notons que vectoriellement, nous avons besoin de trois vecteurs indépendants pour décrire un espace tri-dimensionnel : on peut poser arbitrairement nos axes $x$, $y$ et $z$, tant que ceux-ci soient orthogonales. Il est donc possible de poser que chaque axe de rotation est décrit par un des axes des coordonnées cartésiens.  \\
+
+Ensuite, par le fait que les bobines soient placées dans le champ magnétique et que celles-ci soient en rotation, nous imposons une variation de flux à nos bobines, ce qui d'après la loi de Faraday-Lenz induit une force-électromotrice à nos bobines : 
+\begin{equation}
+\epsilon = -\frac{d \Phi}{dt} = -\frac{d}{dt} \iint_S  \vec{B}  \cdot \vec{dS}
+\end{equation}
+\[ \Rightarrow \epsilon_i  = -\frac{d}{dt} \iint_S \cos(\theta) ||B_i|| dS, \ pour \ i=x,y,z  \] 
+Où $ \epsilon $ est la force-électromotrice induite. Puis,  $ \vec{B}$ est le champ magnétique terrestre externe imposée au système. Le vecteur $ \vec{dS}$ est le vecteur normal à la surface de la la bobine à laquelle le flux magnétique traverse celle-ci et $\theta$ est l'angle entre les vecteurs $\vec{B}$ et $\vec{dS}$. En faisant, le produit scalaire en les vecteurs on retrouve la norme d'une composante cartésienne du champ magnétique, considérant que les bobines ont un axe de rotation aligné avec une coordonnée cartésienne. De plus, comme la bobine est rotation, à une vitesse angulaire $\omega$, nous avons que $\theta = \omega t \ \Rightarrow \epsilon = \epsilon(t)$ . Ainsi, en supposant que nos bobines ont surface circulaire , on retrouve 
+\[ \Rightarrow \epsilon_i(t)  = -||B_i||\frac{d (cos(\omega t))}{dt} \iint_S dS  \]  
+\[ \Rightarrow \epsilon_i(t) = ||B_i|| \pi r^2 sin(\omega t) \omega \]
+En isolant pour $||B_i||$, on retrouve
+\[ ||B_i|| = \frac{ \epsilon_i(t)}{sin(\omega t)} \cdot \frac{1}{\pi r^2 \omega} \]
+En ayant une représentation numérique de notre force électromotrice en fonction du temps, nous pourrions prendre un couple de point $(\epsilon,t)$ et calculer $||B_i||$. Afin d'être plus rigoureux, nous allons moyenner sur une période et retrouver une $||B_i||$ moyen,
+\begin{equation}
+\bar{||B||} = \frac{1}{2\pi} \frac{1}{\pi r^2 \omega} \int_{0}^{2\pi} \frac{\epsilon(t)}{sin(\omega t)} dt = \frac{1}{2(\pi r)^2 \omega} \int_{0}^{2\pi} \frac{\epsilon(t)}{sin(\omega t)} dt
+\end{equation}
+
+
+
+
 \end{document}
