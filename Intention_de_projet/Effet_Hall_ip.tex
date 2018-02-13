@@ -15,32 +15,23 @@
 Massine Kadi, ,\\
 Félix Pelletier, }
 \begin{document}
-Afin de mesurer un champ magnétique, il est possible d'utiliser un système exploitant l'effet Hall. Celui-ci consiste à la formation d'un potentiel proportionnel à un champ magnétique entre les côtés d'un conducteur traversé par un courant électrique perpendiculairement à celui-ci.
+Afin de mesurer un champ magnétique, il est possible d'utiliser un système exploitant l'effet Hall. Celui-ci consiste à la formation d'un potentiel proportionnel à un champ magnétique entre les côtés d'un conducteur traversé par un courant électrique.
+Considérons un volume d'un matériaux conducteur électrique uniforme et parcouru par un courant $I$ entre deux extrémités dans la direction $x$. Si le conducteur est immergé dans un champ magnétique $\vec{B}$, les porteurs de charges en mouvement ressentirons une force magnétique $\vec{F_B}$ telle que \footnote{Où $\vec{v_d}$ est la vitesse de dérive des porteurs de charges, ici des électrons de charge $e$, qui décrit le mouvement global de ceux-ci et peut être définie selon $\vec{v_d} = \frac{\vec{j}}{nq}=\frac{\vec{j}}{ne}$, avec $\vec{j}$ la densité de courant et $n$ la concentration volumique de porteur de charge (qui peut être obtenue en observant les caractéristique du conducteur). Dans le cas où le conducteur est uniforme et de section constante $A$, $\vec{j}=\frac{I}{A}\hat{x}$, on a $\vec{v_d} = \frac{I}{neA}\hat{x}$}.
+\begin{equation*}
+\vec{F_B} = \vec{v_d}\times \vec{B}= \frac{I}{neA}\hat{x}\times \vec{B}
+\end{equation*}
+Les porteurs de charges tendrons donc à se déplacer aussi dans une direction perpendiculaire au courant, provoquant une séparation des charges et l'accumulation d'un potentiel électrique entre les deux côtés du conducteur. L'état du système deviendra rapidement stationnaire, et alors la forces électrique $\vec{F_{E_H}}$ (produite par le champ créé par l'accumulation de charge) et magnétique $\vec{F_B}$ s'annuleront.
+\begin{equation*}
+\vec{F}=\vec{F_{E_H}}+\vec{F_B}=\vec{0} \;\;\;\Rightarrow \vec{0}=e\vec{E_H}+\frac{I}{neA}\hat{x}\times \vec{B} \;\;\;\Rightarrow 0=eE_{Hy}+\frac{I}{neA}B_z
+\end{equation*}
+On peut exprimer le potentiel  par effet Hall $V_H$ produit par $\vec{E}_{Hy}$ uniforme (par accumulation de charge) entre les deux côtés du conducteur de largeur $l$, $V_H = -lE_{Hy}$.
+\begin{equation*}
+\Rightarrow 0=e\frac{-V_H}{l}+\frac{I}{neA}B_z \;\;\;\Rightarrow V_H = \frac{lI}{neA}B_z
+\end{equation*}
+Or, $V_H$ peut être mesuré, permettant de déterminer $B_z$.
+En combinant trois systèmes semblables orientés selon des axes orthogonaux, on peut donc déterminer $B_z$,$B_y$ et $B_x$, identifiant l'orientation et la norme du champ magnétique ambiant (selon l'hypothèse qu'il est constant sur l'ensemble du système composé). 
 
-Considérons un volume d'un matériaux conducteur électrique uniforme et parcouru par un courant $I$ entre deux extrémités. Pour faciliter notre analyse, définissons l'axe de la direction de parcours du courant comme l'axe $x$. Si le conducteur est immergé dans un champ magnétique $\vec{B}$, les porteurs de charges en mouvement (il y a courant électrique) ressentirons une force magnétique $\vec{F_B}$ telle que
-\begin{equation*}
-\vec{F_B} = \vec{v_d}\times \vec{B}
-\end{equation*}
-Où $\vec{v_d}$ est la vitesse de dérive des porteurs de charges, ici des électrons, qui décrit le mouvement global des électrons, qui peut être définie selon
-\begin{equation*}
-\vec{v_d} = \frac{\vec{j}}{nq}
-\end{equation*}
-Où $\vec{j}$ est la densité de courant et $n$ la concentration volumique de porteur de charge (qui peut être obtenue en observant les caractéristique du conducteur). Dans le cas où le conducteur est uniforme et de section constante, $\vec{j}=\frac{I}{A}\hat{x}$, $A$ étant la section du conducteur, et en considérant que les porteurs de charges sont des électrons de charge $e$, on a $\vec{v_d} = \frac{I}{neA}\hat{x}$, donc
-\begin{equation*}
-\vec{F_B} = \frac{I}{neA}\hat{x}\times \vec{B}
-\end{equation*}
-Sous l'effet de cette force, les porteurs de charges tendrons à se déplacer aussi dans une direction perpendiculaire au courant, provoquant une séparation des charges et l'accumulation d'un potentiel électrique entre les deux côtés du conducteur. L'état du système deviendra rapidement stationnaire, et alors la forces électrique $\vec{F_E}$ (produite par le champ créé par l'accumulation de charge) et magnétique $\vec{F_B}$ s'annuleront.
-\begin{equation*}
-\vec{F}=\vec{F_E}+\vec{F_B}=\vec{0} \Rightarrow \vec{0}=e\vec{E}+\frac{I}{neA}\hat{x}\times \vec{B}
-\end{equation*}
-\begin{equation*}
-\Rightarrow 0=eE_y+\frac{I}{neA}B_z
-\end{equation*}
-On peut exprimer la différence de potentiel  par effet Hall $V_H$ produit par $E_y$ uniforme (par accumulation de charge) entre les deux côtés du conducteur, qu'on posera de largeur $l$, $V_H = -lE_y$.
-\begin{equation*}
-\Rightarrow 0=e\frac{-V_H}{l}+\frac{I}{neA}B_z \Rightarrow V_H = \frac{lI}{neA}B_z
-\end{equation*}
-Or, $V_H$ peut être mesuré, permettant de déterminer $B_z$ à partir des caractéristiques du système.
-En combinant trois systèmes semblables orientés selon des axes orthogonaux, on peut donc déterminer $B_z$,$B_y$ et $B_x$, identifiant l'orientation et la norme du champ magnétique ambiant (selon l'hypothèse qu'il est constant sur l'ensemble du système composé). Les mesures de potentiel $V_{Hx}$, $V_{Hy}$ et $V_{Hz}$ sont simples, et la relation de proportionnalité avec $\vec{B}$ est simple. Qui plus est, la réalisation du dispositif de mesure, dans le cas idéal, ne requiert pas de fabrication complexe.
-Cependant, en pratique la vitesse de dérive dans un conducteur standard (pas supraconducteur) est très petite, et l'effet Hall ne produit des potentiels relativement élevés que si $\vert\vec{B}\vert$ est grand, ce qui n'est pas le cas pour le champ magnétique terrestre. Les systèmes intégré mesurant l'effet Hall aisément disponibles sont rarement sensible à moins de $ijgkg \textit{T}$, ce qui est insuffisant pour mesurer le champ magnétique terrestre, de faible amplitude, et construire un capteur à effet Hall complet par nos propres moyens impliquent de trouver ou fabriquer un conducteur uniforme et de le caractériser précisément. ... à compléter avec métriques spécifiques
+Il est aisé d'acquérir des mesures de $V_{Hi}$ avec la plupart des interfaces de mesure analogique électronique, et peu de traitement de donné est nécessaire pour en tirer $\vec{B}$ (il s'agit d'une relation de proportionnalité constante pour chaque composante). Il serait donc probablement réalisable d'automatiser complètement des mesures exploitant l'effet Hall, et l'utilisation d'un tel détecteur serait à la fois très simple, nécessitant possiblement uniquement la pression d'un bouton, et très rapide, permettant qu'une grande quantité de mesures puissent être effectuées et traitées afin d'obtenir un résultat moyen en quelques secondes.
+ De plus, plusieurs circuits intégrés basiques mesurant un $V_H$ selon un axe lorsque alimentés avec une tension de référence existent et s'avèrent peu coûteux.
+Cependant, en pratique la vitesse de dérive dans un conducteur standard (pas supraconducteur) est très petite, et l'effet Hall ne produit des potentiels relativement élevés que si $\vert\vec{B}\vert$ est très grand, ce qui n'est pas le cas pour le champ magnétique terrestre. Les systèmes intégré mesurant l'effet Hall aisément disponibles sont rarement sensible à moins de $1\times10^{-4} \textit{T}$, voir  $1\times10^{-3} \textit{T}$, ce qui est insuffisant pour mesurer le champ magnétique terrestre, d'une amplitude d'approximativement $5\times10^{-5} \textit{T}$. Par ailleurs, construire un capteur à effet Hall complet par nos propres moyens impliquent de trouver ou fabriquer un conducteur uniforme et de le caractériser précisément, et il est don plus qu'improbable de réaliser un capteur plus performant que ceux accessible sur le marché.
 \end{document}
