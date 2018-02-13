@@ -1,5 +1,7 @@
 \documentclass[11pt,a4paper]{article}
 \usepackage[utf8]{inputenc}
+\usepackage[margin=0.75in,footskip=0.25in]{geometry}
+
 %\usepackage[francais]{babel}
 \usepackage[T1]{fontenc}
 \usepackage{amsmath}
@@ -11,7 +13,7 @@
 \usepackage{tikz}
 \renewcommand{\thesection}{\arabic{section}}
 \author{Bastien Gauthier-Soumis,\\
- Edward Halle-Hannan, ,\\
+ Edward Halle-Hannan, 1843683,\\
 Massine Kadi, ,\\
 Félix Pelletier, }
 \title{Intention_de_projet_main}
@@ -67,9 +69,12 @@ Félix Pelletier, }
 \input{Criteres_de_selection_ip.tex}
 
 \section{Solutions évaluées}
+\subsection{Effet Hall}
 \input{Effet_Hall_ip.tex}
+\subsection{Boucles de courant à flux variable}
 \input{Boucles_de_courants_ip.tex}
-\input{Interferometrie_ip.tex}
+\subsection{Magnétomètre à saturation}
+\input{Fluxgate.tex}
 
 \section{Solution sélectionnée}
 \input{Solution_selectionnee_ip.tex}
